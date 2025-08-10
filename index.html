@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahadev Tent House - Premium Tent Services</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FF7F11;
+            --secondary-color: #1E3888;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .navbar-brand img {
+            height: 50px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.postimg.cc/tgsDYmjJ/tenthouseimage1-Photoroom1.png') no-repeat center center;
+            background-size: cover;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #e6700f;
+            border-color: #e6700f;
+        }
+        
+        .service-card {
+            transition: transform 0.3s;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+        }
+        
+        .social-icon {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        
+        .social-icon:hover {
+            color: var(--primary-color);
+        }
+        
+        .contact-info i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: -10px;
+            left: 25%;
+        }
+        
+        .gallery-img {
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/92f10da8-80c9-4f72-8b0c-8117ef06875c.png" alt="Mahadev Tent House Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <a href="#contact" class="btn btn-primary ms-lg-3">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="display-3 fw-bold mb-4">Premium Tent Services</h1>
+                <p class="lead mb-4">Mahadev Tent House offers high-quality tents and event equipment for weddings, parties, and corporate events. Owner Tarachand Prajapat ensures perfect execution of your events.</p>
+                <div class="d-flex gap-3">
+                    <a href="#services" class="btn btn-primary btn-lg">Our Services</a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://i.postimg.cc/C5SbwZ1S/tenthouseimage2.jpg" alt="Tents setup for a wedding with elegant decorations" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4">About Mahadev Tent House</h2>
+                    <p class="mb-4">Founded by Tarachand Prajapat, Mahadev Tent House has been providing premium tent rental services for over 15 years. We specialize in creating memorable experiences for weddings, corporate events, and social gatherings.</p>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex">
+                                <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
+                                <span>High-quality materials</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex">
+                                <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
+                                <span>Experienced team</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex">
+                                <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
+                                <span>Flexible rentals</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex">
+                                <i class="fas fa-check-circle text-primary me-2 mt-1"></i>
+                                <span>Competitive pricing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Services</h2>
+                <p class="lead">We offer comprehensive tent rental solutions for all types of events</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-3">
+                                <i class="fas fa-umbrella-beach"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Wedding Tents</h4>
+                            <p class="card-text">Elegant tents with decorations for your perfect wedding day. Our team handles everything from setup to tear down.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-3">
+                                <i class="fas fa-birthday-cake"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Party Tents</h4>
+                            <p class="card-text">Spacious tents for birthday parties, anniversaries and other celebrations with customizable lighting options.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-3">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Corporate Events</h4>
+                            <p class="card-text">Professional setup for corporate meetings, exhibitions and product launches with branding options.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-3">
+                                <i class="fas fa-chair"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Furniture Rental</h4>
+                            <p class="card-text">Comfortable chairs, tables and other furniture to complement your tent rental.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-3">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Lighting Solutions</h4>
+                            <p class="card-text">Creative lighting designs including chandeliers, fairy lights and LED decorations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-3">
+                                <i class="fas fa-archway"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Entrance Decorations</h4>
+                            <p class="card-text">Custom-designed entrance gates, floral arrangements and thematic decorations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Work Gallery</h2>
+                <p class="lead">Browse our portfolio of successful events</p>
+            </div>
+            <div class="row g-3">
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <img src="https://i.postimg.cc/dQdmMY55/tenthouseimage1-Photoroom.png" width="600" alt="Tent House Decoration" class="img-fluid rounded gallery-img">
+>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <img src="https://i.postimg.cc/Jh3Vdnsj/image10.png" width = "600" alt="Night view of tent with beautiful lighting arrangement" class="img-fluid rounded gallery-img">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <img src="https://i.postimg.cc/DfN2V9YY/tenthouseimage3.jpg" width="600" alt="mehandi function decoration" class="img-fluid rounded gallery-img">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <img src="https://i.postimg.cc/sXFN9Jnm/tenthouseimage5.jpg" width="600" alt="mehandi function decoration" class="img-fluid rounded gallery-img">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <img src="https://i.postimg.cc/tgSn6r2Z/gatedecoration.jpg" width="600" alt="entry gate decoration:Close-up of tent entrance decoration with flowers" class="img-fluid rounded gallery-img">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <img src="https://i.postimg.cc/BbbHjrxV/tentimage6.jpg" width="400" alt="Spacious tent with round tables and elegant chair covers" class="img-fluid rounded gallery-img">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <img src="https://i.postimg.cc/3xqvqfQX/tentimage7-3.jpg" width="700" alt="trending stage decoration fir groom and bride" class="img-fluid rounded gallery-img">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <img src="https://i.postimg.cc/Y0NPnm4F/tent3-1.png" width="600" alt="Spacious tent with round tables and elegant chair covers" class="img-fluid rounded gallery-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="lead">Get in touch for bookings and inquiries</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="card h-100">
+                        <div class="card-body pFAULTY_content_hidden">
+                            <h4 class="card-title mb-4">Contact Information</h4>
+                            
+                            <div class="contact-info mb-4">
+                                <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Mahadev Tent House, Dattau, Sanwrad,Didwana Rajasthan</p>
+                                <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +91 9928423717/+91 8788125868 </p>
+                                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> kavitaprj2006@gmail.com</p>
+                                <p><i class="fas fa-user"></i> <strong>Owner:</strong> Tarachand Prajapat</p>
+                                <p><i class="fas fa-clock"></i> <strong>Business Hours:</strong> 9:00 AM - 8:00 PM (7 Days a Week)</p>
+                            </div>
+                            
+                            <h5 class="mb-3">Follow Us</h5>
+                            <div class="d-flex">
+                                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="https://wa.me/919928423717" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <h5 class="mb-3">Why Choose Us?</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-primary me-2"></i> 15+ Years Experience</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i> Premium Quality Tents</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i> Competitive Pricing</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i> 24/7 Customer Support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h4 class="card-title mb-4">Send Us a Message</h4>
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone" class="form-label">Phone</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="eventType" class="form-label">Event Type</label>
+                                    <select class="form-select" id="eventType">
+                                        <option selected>Select Event Type</option>
+                                        <option>Wedding</option>
+                                        <option>Birthday Party</option>
+                                        <option>Corporate Event</option>
+                                        <option>Religious Function</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="date" class="form-label">Event Date</label>
+                                    <input type="date" class="form-control" id="date">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Your Message</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="container-fluid px-0">
+        <div class="map-container" style="height: 400px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3364.2965550346103!2d74.45133088067433!3d27.487176215224977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396b3c608e240491%3A0x1372b2299af15e31!2sTulsi%20Sadan!5e1!3m2!1sen!2sin!4v1753607784366!5m2!1sen!2sin" 
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="mb-4 text-white">Mahadev Tent House</h4>
+                    <p>Family-owned tent business serving didwana and nearby areas in Rajasthan  for 15+ years. Specialized in wedding pandals, corporate events, and religious functions with complete furniture and decor solutions.</p>
+                    <div class="mt-3">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-white-50">Home</a></li>
+                        <li class="mb-2"><a href="#services" class="text-decoration-none text-white-50">Services</a></li>
+                        <li class="mb-2"><a href="#gallery" class="text-decoration-none text-white-50">Gallery</a></li>
+                        <li class="mb-2"><a href="#testimonials" class="text-decoration-none text-white-50">Testimonials</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-decoration-none text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-white mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-white-50">Wedding&party Tents</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-white-50">Corporate Events</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-white-50">Premium Decorations</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-white-50">Furniture Rental</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-white-50">Lighting Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Contact</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Mahadev Tent House,  Mahadev Tent House, Dattau, Sanwarad,Didwana Rajasthan</li>
+                        <li class="mb-2"><i class="fas fa-phone text-primary me-2"></i> +91 9928423717</li>
+                        <li class="mb-2"><i class="fas fa-phone text-primary me-2"></i> +91 8788125868</li>
+                        <li class="mb-2"><i class="fas fa-envelope text-primary me-2"></i> kavitaprj2006@gmail.com</li>
+                        <li class="mb-2"><i class="fas fa-user text-primary me-2"></i> Owner: Tarachand Prajapat</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4 bg-white-50">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 Mahadev Tent House. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> for Mahadev Tent House</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const eventType = document.getElementById('eventType').value;
+            const date = document.getElementById('date').value;
+            const message = document.getElementById('message').value;
+            
+            // Simple validation
+            if(!name || !phone || !email || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Here you would typically send this data to a server
+            // For demo purposes, we'll just show an alert
+            alert(`Thank you, ${name}! Your inquiry has been received. We'll contact you soon at ${phone} or ${email}.`);
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Gallery modal functionality
+        const galleryImages = document.querySelectorAll('.gallery-img');
+        galleryImages.forEach(img => {
+            img.addEventListener('click', function() {
+                // Create modal
+                const modal = document.createElement('div');
+                modal.style.position = 'fixed';
+                modal.style.top = '0';
+                modal.style.left = '0';
+                modal.style.width = '100%';
+                modal.style.height = '100%';
+                modal.style.backgroundColor = 'rgba(0,0,0,0.9)';
+                modal.style.display = 'flex';
+                modal.style.alignItems = 'center';
+                modal.style.justifyContent = 'center';
+                modal.style.zIndex = '1000';
+                modal.style.cursor = 'pointer';
+                
+                // Create image inside modal
+                const modalImg = document.createElement('img');
+                modalImg.src = this.src;
+                modalImg.alt = this.alt;
+                modalImg.style.maxWidth = '90%';
+                modalImg.style.maxHeight = '90%';
+                
+                modal.appendChild(modalImg);
+                document.body.appendChild(modal);
+                
+                // Close modal on click
+                modal.addEventListener('click', function() {
+                    document.body.removeChild(modal);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
