@@ -326,7 +326,123 @@
     </section>
 
     <!-- Testimonials Section -->
+    <section id="testimonials" style="padding: 40px; background: #f8f9fa; font-family: Arial, sans-serif;">
+  <h2 style="text-align: center; margin-bottom: 20px; font-size: 28px;">⭐ Customer Testimonials ⭐</h2>
+
+  <!-- Display Reviews -->
+  <div id="testimonial-list" style="max-width: 800px; margin: auto; display: flex; flex-direction: column; gap: 15px;"></div>
+
+  <hr style="margin: 30px auto; width: 60%;">
+
+  <!-- Review Form -->
+  <h3 style="text-align: center;">Share Your Experience</h3>
+  <form id="testimonial-form" style="max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 10px;">
+    <input type="text" id="name" placeholder="Your Name" required style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
     
+    <!-- Star Rating -->
+    <div id="star-rating" style="display: flex; justify-content: center; gap: 5px; font-size: 24px; cursor: pointer;">
+      <span data-value="1">★</span>
+      <span data-value="2">★</span>
+      <span data-value="3">★</span>
+      <span data-value="4">★</span>
+      <span data-value="5">★</span>
+    </div>
+    <input type="hidden" id="rating" name="rating" required>
+
+    <textarea id="message" placeholder="Write your review..." required style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; height: 100px;"></textarea>
+    <button type="submit" style="padding: 10px; background: #ff6600; color: white; border: none; border-radius: 5px; cursor: pointer;">Submit Review</button>
+  </form>
+</section>
+
+<script>
+  const testimonialList = document.getElementById("testimonial-list");
+  const form = document.getElementById("testimonial-form");
+  const stars = document.querySelectorAll("#star-rating span");
+  const ratingInput = document.getElementById("rating");
+
+  let selectedRating = 0;
+
+  // Star rating selection
+  stars.forEach(star => {
+    star.addEventListener("click", () => {
+      selectedRating = star.getAttribute("data-value");
+      ratingInput.value = selectedRating;
+      stars.forEach(s => s.style.color = s.getAttribute("data-value") <= selectedRating ? "gold" : "gray");
+    });
+  });
+
+  // Fetch and display testimonials
+  function loadTestimonials() {
+    fetch("getreviews.php")
+      .then(res => res.json())
+      .then(data => {
+        testimonialList.innerHTML = "";
+        data.forEach(t => {
+          const div = document.createElement("div");
+          div.style.background = "#fff";
+          div.style.padding = "15px";
+          div.style.borderRadius = "8px";
+          div.style.boxShadow = "0 2px 5px rgba(0,0,0,0.1)";
+          div.style.animation = "fadeIn 0.5s ease";
+          div.innerHTML = `
+            <strong>${t.name}</strong> - <span style="color: gold;">${"★".repeat(t.rating)}</span>
+            <p>${t.message}</p>
+            <small style="color: gray;">${new Date(t.created_at).toLocaleString()}</small>
+          `;
+          testimonialList.appendChild(div);
+        });
+      });
+  }
+
+  // Submit review
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const rating = ratingInput.value;
+    const message = document.getElementById("message").value.trim();
+
+    if (!rating) {
+      alert("Please select a star rating!");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("rating", rating);
+    formData.append("message", message);
+
+    fetch("savereview.php", {
+      method: "POST",
+      body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.status === "success") {
+        form.reset();
+        stars.forEach(s => s.style.color = "gray");
+        loadTestimonials();
+      } else {
+        alert("Error saving review!");
+      }
+    });
+  });
+
+  loadTestimonials();
+</script>
+
+<style>
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  #star-rating span {
+    transition: color 0.3s;
+  }
+  #star-rating span:hover {
+    color: gold !important;
+  }
+</style>
+
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container">
